@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.form-control .ng-star-inserted {
+  padding: 10px 30px;
+  color: red;
+}
+.btn-default {
+  cursor: pointer;
+  color: #fff;
+  background: #ff4c60;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn {
+  border-radius: 30px;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  overflow: hidden;
+  line-height: 1;
+  padding: 12px 32px;
+  position: relative;
+}
+
+.btn-default:hover {
+  color: #fff;
+  animation-name: button-push;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.content ul li a {
+  color: #ffffff;
+  font-size: 22px;
+}
+.button a{color:#ffffff !important}

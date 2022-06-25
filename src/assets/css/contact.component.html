@@ -1,0 +1,67 @@
+<section class="experience about contact mb-5 pb-5">
+  <div class="container">
+    <h2 class="pb-5">
+      Get In Touch
+    </h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>
+          Let's talk about everything!
+        </h3>
+        <p>
+          Don't like forms? Send me an email. 👋
+
+        </p>
+      </div>
+      <div class="col-md-8">
+
+        <form id="contact-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group mb-5">
+                <input type="text" formControlName="Name" id="Name" placeholder="Your name" required="required" data-error="Name is required." class="form-control">
+                <div *ngIf="(submitted || f['Name'].touched) && f['Name'].invalid">
+                  <div *ngIf="f['Name'].errors && f['Name'].errors['required']">
+                    Enter your name
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group mb-5">
+                <input type="email" formControlName="Email" id="Email" placeholder="Email Address" required="required" data-error="Email Address is required." class="form-control">
+                <div *ngIf="(submitted || f['Email'].touched) && f['Email'].invalid">
+                  <div *ngIf="f['Email'].errors && f['Email'].errors['required']">
+                    Enter your email
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group mb-5">
+                <input type="text" formControlName="Subject" id="Subject" placeholder="Subject" required="required" data-error="Subject is required." class="form-control">
+                <div *ngIf="(submitted || f['Subject'].touched) && f['Subject'].invalid">
+                  <div *ngIf="f['Subject'].errors && f['Subject'].errors['required']">
+                    Enter your subject
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group mb-5">
+                <textarea formControlName="Message" id="Message" placeholder="Message" required="required" rows="5" data-error="Message is required." class="form-control"></textarea>
+                <div *ngIf="(submitted || f['Message'].touched) && f['Message'].invalid">
+                  <div *ngIf="f['Message'].errors && f['Message'].errors['required']">
+                    Enter your message
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-default mb-5" >Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<a href="" id="return-to-top" style="display:block"><mat-icon>arrow_upward</mat-icon></a>

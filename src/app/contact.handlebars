@@ -1,0 +1,56 @@
+<section class="experience about contact mb-5 pb-5">
+  <div class="container">
+    <h2 class="pb-5">
+      Get In Touch
+    </h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>
+          Let's talk about everything!
+        </h3>
+        <p>
+          Don't like forms? Send me an email. 👋
+
+        </p>
+      </div>
+      <div class="col-md-8">
+        {{msg}}
+        <form id="contact-form" method="POST" action="send">
+          <div class="row">
+            <div class="col-md-6">
+              <div class=" mb-5">
+                <input type="text" id="name" name="name" placeholder="Your name" required="required" >
+                 Enter your name
+                  
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class=" mb-5">
+                <input type="email" id="email" name="email" placeholder="Email Address" required="required" >
+                   Enter your email
+                   
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="mb-5">
+                <input type="text" id="subject" name="subject" placeholder="Subject" required="required" >
+                Enter your subject
+                 
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="mb-5">
+                <textarea id="message" name="message" placeholder="Message" required="required" rows="5" ></textarea>
+               
+                    Enter your message
+                   
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-default mb-5" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<a href="" id="return-to-top" style="display:block"><mat-icon>arrow_upward</mat-icon></a>
