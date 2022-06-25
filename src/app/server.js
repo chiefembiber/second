@@ -45,12 +45,12 @@ app.post('/contact', (req, res) => {
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
     service:'gmail',
-   // host: 'mail.govardhini.com',
+   // host: '',
     //port: 587,
    // secure: false, // true for 465, false for other ports
     auth: {
-      user: 'govardhininatarajan@gmail.com', // generated ethereal user
-      pass: 'pbyxjvhcnwkzmzvw'  // generated ethereal password
+      user: '', // generated ethereal user
+      pass: ''  // generated ethereal password
     }
     ///tls: {
    //   rejectUnauthorized: false
@@ -62,8 +62,8 @@ app.post('/contact', (req, res) => {
     //html: string,
 
     from: req.body.email, // sender address
-    to: 'govardhininatarajan@gmail.com', // list of receivers
-    subject: 'Govardhini', // Subject line
+    to: '', // list of receivers
+    subject: 'Subject', // Subject line
     //text: req.body.message // plain text body
     html: "<p>You have a new contact request</p><h3>Contact Details</h3><ul><li>Name: "+req.body.name+"</li><li>Company: "+req.body.email+"</li><li>Email:"+req.body.subject+"</li><li>Phone: "+req.body.message+"</li></ul>",
     // html:output
