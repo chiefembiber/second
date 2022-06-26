@@ -3,6 +3,16 @@ import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms'
 import { HttpClient } from '@angular/common/http';
 //import { Http } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { UserService } from '../user.service';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+export interface User {
+  user: string;
+  password: string;
+}
+
 
 @Component({
   selector: 'app-contact',
@@ -12,6 +22,30 @@ import { HttpClientModule } from '@angular/common/http';
 export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
+
+  //user$: Observable<User>;
+
+  form: FormGroup = this.fb.group({
+    name: ['', [Validators.required]],
+    email: ['', [Validators.required]],
+    subject: ['', [Validators.required]],
+    message: ['', [Validators.required]]
+  });
+
+  constructor(private fb: FormBuilder,
+    private httpClient: HttpClient,
+    private userService: UserService,
+   
+  ) {
+  }
+
+  onSubmit() {
+    this.userService.fetchUser(this.form.value).subscribe();
+       
+
+  }
+ 
+
     /*
    
 
@@ -50,53 +84,6 @@ export class ContactComponent implements OnInit {
 
   }
   */
-  
-
-  /*
-  register() {
    
-
-    this.loading = true;
-    this.buttonText = "Sending...";
-    let user = {
-      Name: this.formControlName.value,
-      Email: this.formControlName.value
-    }
-
-
-
-
-    this.http.sendEmail("http://localhost:3000/sendmail", user).subscribe(
-      data => {
-        let res: any = data;
-        console.log(
-          '${user.name} is successfully registered.');
-      },
-      err => {
-        console.log(err);
-        this.loading = false;
-        this.buttonText = "Send";
-      }, () => {
-        this.loading = false;
-        this.buttonText = "Send";
-      }
-    );
-
-
-  }
-  */
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 }

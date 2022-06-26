@@ -13,7 +13,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,7 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule, MatSidenavModule, BrowserAnimationsModule, MatToolbarModule, MatIconModule, MatDividerModule,
-    MatProgressBarModule, FormsModule, ReactiveFormsModule
+    MatProgressBarModule, FormsModule, ReactiveFormsModule, MatFormFieldModule, MatInputModule, HttpClientModule
     
   ],
   providers: [],
